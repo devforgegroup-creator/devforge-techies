@@ -154,7 +154,7 @@
     <section class="community" id="community">
       <div class="container community-inner">
         <div><span class="section-label">JOIN THE COMMUNITY</span><h2>Don't learn alone.</h2><p>Connect with fellow learners, share your progress, ask questions and grow alongside other people building their future in tech.</p></div>
-        <a class="btn light" href="#contact">Join DevForge <span>→</span></a>
+        <a class="btn light" href="https://chat.whatsapp.com/Da0IdO5avH3GBXCWUOPIx6">Join DevForge <span>→</span></a>
       </div>
     </section>
 
@@ -189,22 +189,65 @@
     <section class="section contact" id="contact">
       <div class="container contact-grid">
         <div><span class="section-label">GET STARTED</span><h2>Your next chapter<br>starts <span>here.</span></h2><p>Ready to start learning and building? Tell us what you want to learn and we'll help you find your path.</p></div>
-        <form id="contactForm" class="contact-form">
-          <label>Name<input type="text" id="name" placeholder="Your name" required></label>
-          <label>Email<input type="email" id="email" placeholder="you@example.com" required></label>
-          <label>What do you want to learn?
-            <select id="course" required><option value="">Select a path</option><option>Frontend Engineering</option><option>Backend Engineering</option><option>UI/UX Design</option></select>
-          </label>
-          <button class="btn" type="submit">Send Message <span>→</span></button>
-          <p class="form-message" id="formMessage"></p>
-        </form>
+        <form
+  id="contactForm"
+  class="contact-form"
+  action="https://formspree.io/f/xkjnlepe"
+  method="POST"
+>
+  <label>
+    Name
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Your name"
+      required
+    >
+  </label>
+
+  <label>
+    Email
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="you@example.com"
+      required
+    >
+  </label>
+
+  <label>
+    What do you want to learn?
+    <select id="course" name="course" required>
+      <option value="">Select a path</option>
+      <option value="Frontend Engineering">Frontend Engineering</option>
+      <option value="Backend Engineering">Backend Engineering</option>
+      <option value="UI/UX Design">UI/UX Design</option>
+      <option value="Software Development">Software Development</option>
+    </select>
+  </label>
+
+  <button class="btn" type="submit">
+    Send Message <span>→</span>
+  </button>
+
+  <p class="form-message" id="formMessage"></p>
+</form>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-inner">
+    <div class="container footer-top">
       <a class="logo" href="#home"><span class="logo-mark">&lt;/&gt;</span><span>Dev<span>Forge</span></span></a>
+      <div class="footer-socials">
+        <a href="https://x.com/DevForgeG" target="_blank" rel="noopener" aria-label="DevForge on X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://facebook.com/groups/1041541115543144/?mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener" aria-label="DevForge Facebook community"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.505 17.523 2 12 2S2 6.505 2 12.06c0 5.02 3.657 9.184 8.438 9.94v-7.03H7.898v-2.91h2.54V9.845c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.91h-2.33V22c4.78-.756 8.437-4.92 8.437-9.94z"/></svg></a>
+        <a href="https://www.linkedin.com/groups/17262005" target="_blank" rel="noopener" aria-label="DevForge LinkedIn community"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.451 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.94v5.666H9.355V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.558V9h3.556v11.452z"/></svg></a>
+      </div>
+    </div>
+    <div class="container footer-inner">
       <p>Learn. Build. Become.</p>
       <p>© <span id="year"></span> DevForge. Built for builders.</p>
     </div>
