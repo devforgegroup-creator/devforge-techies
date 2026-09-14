@@ -189,15 +189,51 @@
     <section class="section contact" id="contact">
       <div class="container contact-grid">
         <div><span class="section-label">GET STARTED</span><h2>Your next chapter<br>starts <span>here.</span></h2><p>Ready to start learning and building? Tell us what you want to learn and we'll help you find your path.</p></div>
-        <form id="contactForm" class="contact-form">
-          <label>Name<input type="text" id="name" placeholder="Your name" required></label>
-          <label>Email<input type="email" id="email" placeholder="you@example.com" required></label>
-          <label>What do you want to learn?
-            <select id="course" required><option value="">Select a path</option><option>Frontend Engineering</option><option>Backend Engineering</option><option>UI/UX Design</option></select>
-          </label>
-          <button class="btn" type="submit">Send Message <span>→</span></button>
-          <p class="form-message" id="formMessage"></p>
-        </form>
+        <form
+          id="contactForm"
+          class="contact-form"
+          action="https://formspree.io/f/xkjnlepe"
+          method="POST"
+        >
+        <label>
+          Name
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            required
+          >
+        </label>
+
+        <label>
+          Email
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          >
+        </label>
+
+        <label>
+          What do you want to learn?
+          <select id="course" name="course" required>
+            <option value="">Select a path</option>
+            <option value="Frontend Engineering">Frontend Engineering</option>
+            <option value="Backend Engineering">Backend Engineering</option>
+            <option value="UI/UX Design">UI/UX Design</option>
+            <option value="Software Development">Software Development</option>
+          </select>
+        </label>
+
+        <button class="btn" type="submit">
+          Send Message <span>→</span>
+        </button>
+
+        <p class="form-message" id="formMessage"></p>
+      </form>
       </div>
     </section>
   </main>

@@ -18,14 +18,44 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 document.getElementById("year").textContent = new Date().getFullYear();
 
 const contactForm = document.getElementById("contactForm");
+
 if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const name = document.getElementById("name").value.trim();
-    const course = document.getElementById("course").value;
+
+    const submitButton = contactForm.querySelector("button[type='submit']");
     const message = document.getElementById("formMessage");
 
-    message.textContent = `Thanks, ${name}! Your interest in ${course} has been received.`;
-    event.target.reset();
+    const name = document.getElementById("name").value.trim();
+    const course = document.getElementById("course").value;
+
+    submitButton.disabled = true;
+    submitButton.innerHTML = "Sending...";
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        message.textContent =
+          `Thanks, ${name}! Your interest in ${course} has been received.`;
+
+        contactForm.reset();
+      } else {
+        message.textContent =
+          "Something went wrong. Please try again.";
+      }
+    } catch (error) {
+      message.textContent =
+        "Unable to send your message. Please check your connection and try again.";
+    }
+
+    submitButton.disabled = false;
+    submitButton.innerHTML = "Send Message <span>→</span>";
   });
 }
