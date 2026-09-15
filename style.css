@@ -27,3 +27,41 @@
 .course-cta-actions{display:flex;gap:16px;flex-wrap:wrap}
 .btn.outline{background:transparent;color:#fff;border:1px solid #3a3a42;box-shadow:none}
 .btn.outline:hover{background:#1a1a20;transform:translateY(-2px)}
+
+/* New course icon variants (emoji) */
+.course-icon.emoji{font-size:20px}
+.course-icon.pink{background:#ffe9f0;color:#d6336c}
+.course-icon.teal{background:#e6fbf6;color:#0f9488}
+.course-icon.indigo{background:#eef1ff;color:#4c51e6}
+.course-icon.sky{background:#e6f6ff;color:#0284c7}
+.course-icon.rose{background:#fff1f0;color:#dc2626}
+
+/* Mentor cross-link on course pages */
+.mentor-cta{margin-top:18px;font-size:12px;color:#777}
+.mentor-cta a{color:#6c3cff;text-decoration:none;font-weight:700}
+.mentor-cta a:hover{text-decoration:underline}
+
+/* Instructor application page */
+.instructor-hero{background:#faf9ff;padding:70px 0 60px}
+.instructor-hero .eyebrow{margin-bottom:20px}
+.instructor-hero h1{font-size:clamp(38px,5vw,60px);line-height:1.03;letter-spacing:-3px;margin-bottom:20px}
+.instructor-hero>.container>p{max-width:600px;color:#666;font-size:16px;margin-bottom:10px}
+.free-role-badge{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:#eee9ff;color:#6c3cff;font-size:11px;font-weight:800;letter-spacing:.6px;margin-top:20px}
+.perks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:16px}
+.perk-card{padding:28px;border:1px solid #e8e8eb;border-radius:14px;background:#fff}
+.perk-card .perk-icon{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;background:#f4f1ff;color:#6c3cff;font-size:18px;margin-bottom:18px}
+.perk-card h3{font-size:16px;margin-bottom:8px}
+.perk-card p{font-size:13px;color:#73737a;line-height:1.7}
+.application-section{background:#fafafa}
+.application-wrap{max-width:720px;margin:0 auto;background:#fff;border:1px solid #eee;border-radius:16px;padding:40px}
+.application-form{display:flex;flex-direction:column;gap:18px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.application-form label{font-size:11px;font-weight:800;color:#555}
+.application-form input,.application-form select,.application-form textarea{display:block;width:100%;margin-top:7px;border:1px solid #ddd;border-radius:8px;padding:13px 14px;font:inherit;font-size:13px;outline:none;background:#fff;resize:vertical}
+.application-form input:focus,.application-form select:focus,.application-form textarea:focus{border-color:#8b6cff;box-shadow:0 0 0 3px #6c3cff12}
+.checkbox-group{display:flex;flex-direction:column;gap:10px;border:1px solid #eee;border-radius:10px;padding:14px 16px}
+.checkbox-group>span{font-size:11px;font-weight:800;color:#555;margin-bottom:2px}
+.checkbox-row{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:#333}
+.checkbox-row input{width:auto;margin:0}
+.application-form .form-message{margin-top:4px!important}
+@media(max-width:700px){.perks-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.application-wrap{padding:26px}}
